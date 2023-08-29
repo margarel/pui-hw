@@ -1,0 +1,23 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.logo {
+    width: 400px;
+}
+
+.content {
+    text-align: center;
+    display: block;
+}
+
+.product {
+    width: 400px;
+    text-align: left;
+}
+
+.product-thumbnail {
+    width: 100%;
+    height: 100%;
+}
