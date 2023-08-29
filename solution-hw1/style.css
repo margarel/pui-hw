@@ -13,6 +13,7 @@ body {
 }
 
 .product {
+    margin: auto;
     width: 400px;
     text-align: left;
 }
