@@ -1,37 +1,41 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Roboto, Arial, sans-serif;
 }
+
+h1 {
+    font-weight: 400; /* Check */
+}
+
+/* h2 {
+    font-weight: 400;
+    text-align: left;
+} */
 
 p {
-    margin: 4px;
+    text-align: left;
+    font-size: 24px;
 }
 
-.logo {
+img {
+    border: 2px solid black;
+}
+
+#logo {
     width: 400px;
+    border: none;
 }
 
 hr {
     border-top: 4px solid black;
 }
 
-.content {
+.center {
     text-align: center;
     display: block;
 }
 
 nav {
-    font-size: 18px;
-    margin: 16px;
-}
-
-#nav-cart {
+    margin-top: 16px;
     margin-bottom: 64px;
-}
-
-h1 {
-    font-weight: 400;
-}
-
-h2 {
-    font-weight: 400;
+    line-height: 32px;
 }

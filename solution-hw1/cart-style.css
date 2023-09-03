@@ -1,4 +1,12 @@
+#nav-cart {
+    background-color: yellow;
+}
+
 .cart-thumbnail {
     width: 200px;
     border: 2px solid black;
+}
+
+h2 {
+    line-height: 32px;
 }

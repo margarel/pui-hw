@@ -1,32 +1,36 @@
 #nav-product {
-    background-color: yellow; /*this is wrong*/
+    background-color: yellow;
 }
 
-.product {
+.card {
     margin: auto;
     padding: 8px;
-    width: 400px;
-    text-align: left;
+    width: fit-content;
+}
+
+.card:hover {
+    font-weight: 600;
+    background-color: yellow;
+}
+
+.card-link {
     text-decoration: none;
 }
 
-.product:hover {
-    background-color: yellow;
-    font-weight: bold;
+.thumbnail {
+    width: 400px;
 }
 
-.product-thumbnail {
-    width: 100%;
-    height: 100%;
-    border: 2px solid black;
+.listing {
+    width: 400px;
 }
 
-.product-title {
-    /* font-size: 20px; */
+#title {
     text-decoration: underline #bfbfbf;
+    margin-bottom: 0px;
 }
 
-.product-price {
-    font-weight: normal;
-    text-decoration: none; /* doesn't work */
+#price {
+    font-weight: 400;
+    margin-top: 8px;
 }
