@@ -6,14 +6,16 @@ h1 {
     font-weight: 400; /* Check */
 }
 
-/* h2 {
+h2 {
     font-weight: 400;
     text-align: left;
-} */
+}
 
 p {
     text-align: left;
     font-size: 24px;
+    margin-top: 8px;
+    margin-bottom: 0px;
 }
 
 img {
@@ -37,5 +39,6 @@ hr {
 nav {
     margin-top: 16px;
     margin-bottom: 64px;
+    font-size: 18px;
     line-height: 32px;
 }

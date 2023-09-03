@@ -4,7 +4,6 @@
 
 #product-img {
     width: 600px;
-    border: solid 2px black;
 }
 
 .content-width {
@@ -15,14 +14,13 @@
 
 .content-margin {
     margin: 32px 0px;
-    font-size: 18px;
 }
 
 .dropdown {
     width: 100%;
     padding: 8px;
     border: 2px solid black;
-    font-size: 18px;
+    font-size: 24px;
     margin-top: 8px;
 }
 
