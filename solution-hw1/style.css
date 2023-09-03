@@ -1,6 +1,5 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
 }
 
 p {
@@ -11,37 +10,28 @@ p {
     width: 400px;
 }
 
+hr {
+    border-top: 4px solid black;
+}
+
 .content {
     text-align: center;
     display: block;
+}
+
+nav {
+    font-size: 18px;
+    margin: 16px;
+}
+
+#nav-cart {
+    margin-bottom: 64px;
 }
 
 h1 {
     font-weight: 400;
 }
 
-.product {
-    margin: auto;
-    padding: 8px;
-    width: 400px;
-    text-align: left;
-}
-
-.product:hover {
-    background-color: yellow;
-    font-weight: bold;
-}
-
-.product-thumbnail {
-    width: 100%;
-    height: 100%;
-}
-
-.product-title {
-    font-size: 24px;
-    text-decoration: underline #bfbfbf;
-}
-
-.product-price:hover {
+h2 {
     font-weight: 400;
 }

@@ -1,0 +1,32 @@
+#nav-product {
+    background-color: yellow; /*this is wrong*/
+}
+
+.product {
+    margin: auto;
+    padding: 8px;
+    width: 400px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.product:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.product-thumbnail {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+}
+
+.product-title {
+    /* font-size: 20px; */
+    text-decoration: underline #bfbfbf;
+}
+
+.product-price {
+    font-weight: normal;
+    text-decoration: none; /* doesn't work */
+}
