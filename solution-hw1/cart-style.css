@@ -1,3 +1,7 @@
+#nav-cart {
+    background-color: yellow;
+}
+
 .card {
     margin: auto;
     width: fit-content;
@@ -12,3 +16,17 @@
     text-align: center;
 }
 
+.subheading {
+    text-align: center;
+}
+
+.end {
+    width: 800px;
+}
+
+#btn-cart {
+    padding: 12px 24px;
+    /* font-size: 24px; */
+    background-color: yellow;
+    border: 2px solid black;
+}
