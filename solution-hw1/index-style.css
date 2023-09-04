@@ -23,6 +23,7 @@
 
 .listing {
     width: 400px;
+    line-height: 10px;
 }
 
 #title {
@@ -31,4 +32,5 @@
 
 #price {
     font-weight: 400;
+    margin-bottom: 10px;
 }

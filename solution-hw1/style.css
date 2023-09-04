@@ -2,21 +2,17 @@ body {
     font-family: Helvetica, Roboto, Arial, sans-serif;
 }
 
-h1 {
-    font-weight: 400; /* Check */
-}
-
-h2 {
+/* h2 {
     font-weight: 400;
     text-align: left;
-}
+} */
 
-p {
+/* p {
     text-align: left;
     font-size: 24px;
     margin-top: 8px;
     margin-bottom: 0px;
-}
+} */
 
 img {
     border: 2px solid black;
@@ -31,9 +27,25 @@ hr {
     border-top: 4px solid black;
 }
 
+/* Emulating h1 without affected by Chrome 33 styling */
+.page-title {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.subheading {
+    font-size: 24px;
+    text-align: left;
+}
+
+.caption {
+    font-weight: 600;
+    font-size: 18px;
+}
+
 .center {
     text-align: center;
-    display: block;
+/*     display: block; */
 }
 
 nav {

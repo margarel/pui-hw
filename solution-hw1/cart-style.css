@@ -1,12 +1,14 @@
-#nav-cart {
-    background-color: yellow;
+.card {
+    margin: auto;
+    width: fit-content;
 }
 
-.cart-thumbnail {
+.thumbnail {
     width: 200px;
-    border: 2px solid black;
 }
 
-h2 {
-    line-height: 32px;
+.remove {
+    font-size: 12px;
+    text-align: center;
 }
+
