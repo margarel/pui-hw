@@ -14,6 +14,8 @@
 .remove {
     font-size: 12px;
     text-align: center;
+    font-weight: 600;
+    text-decoration: underline #bfbfbf;
 }
 
 .subheading {
@@ -22,6 +24,10 @@
 
 .end {
     width: 800px;
+}
+
+#price {
+    margin-bottom: 96px;
 }
 
 #btn-cart {
