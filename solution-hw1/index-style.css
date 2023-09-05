@@ -22,11 +22,11 @@
     line-height: 10px;
 }
 
-#title {
+.title {
     text-decoration: underline #bfbfbf;
 }
 
-#price {
+.price {
     font-weight: 400;
     margin-bottom: 10px;
 }
