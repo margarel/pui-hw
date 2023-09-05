@@ -1,3 +1,5 @@
+/* Overall styling that applies to all 3 pages */
+
 body {
     font-family: Helvetica, Roboto, Arial, sans-serif;
 }
@@ -47,6 +49,7 @@ nav {
     line-height: 32px;
 }
 
+/* Current active page is highlighted */
 .nav-active {
     font-weight: 600;
     background-color: yellow;

@@ -1,7 +1,4 @@
-/* #nav-product {
-    background-color: yellow;
-    font-weight: 600;
-} */
+/* Styling applied to Gallery page */
 
 .card {
     margin: 0px auto 32px auto;
@@ -27,6 +24,7 @@
     text-decoration: underline #bfbfbf;
 }
 
+/* Font weight is always regular highlighted or not */
 .price {
     font-weight: 400;
     margin-bottom: 10px;
