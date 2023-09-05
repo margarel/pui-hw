@@ -1,6 +1,7 @@
-#nav-cart {
+/* #nav-cart {
     background-color: yellow;
-}
+    font-weight: 600;
+} */
 
 .card {
     margin: auto;
@@ -24,6 +25,7 @@
 
 .end {
     width: 800px;
+    margin: auto;
 }
 
 #price {

@@ -46,3 +46,8 @@ nav {
     font-size: 18px;
     line-height: 32px;
 }
+
+.nav-active {
+    font-weight: 600;
+    background-color: yellow;
+}
