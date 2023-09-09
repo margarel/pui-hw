@@ -1,0 +1,45 @@
+/* what is the full screen supposed to look like ?!?!??!?!?!?!?!?!? */
+main {
+    display: flex;
+    width: fit-content;
+    margin: 0px 64px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 32px;
+    max-width: 400px;
+}
+
+.customization {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.dropdown {
+    width: 100%;
+    font-size: 24px;
+    padding: 8px;
+    border: 2px solid black;
+    margin-bottom: 24px;
+}
+
+#last-child {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.caption {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#btn-cart {
+    padding: 8px 24px;
+    background-color: yellow;
+    border: 2px solid black;
+    margin-left: 16px;
+}
