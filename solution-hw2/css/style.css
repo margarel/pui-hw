@@ -1,0 +1,86 @@
+/* https://www.w3schools.com/cssref/css3_pr_font-face_rule.php */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
+@font-face {
+    font-family: "FS Industrie";
+    src: url(fonts/FSIndustrieRegular.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FS Industrie";
+    src: url(fonts/FSIndustrieBold.otf) format(opentype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: "FS Industrie", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    border: 2px solid black;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+/* Inherits parents default value */
+h2 {
+    font-weight: inherit;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 24px;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: stretch;
+}
+
+#logo {
+    margin: 24px;
+    border: none;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+mark {
+    font-weight: bold;
+}
+
+.nav-active, .nav-inactive {
+    margin: 0px 64px;
+    font-size: 24px;
+}
+
+hr {
+    border: 2px solid black;
+    margin-inline: 0;
+    align-self: stretch;
+}
