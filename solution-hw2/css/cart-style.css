@@ -16,44 +16,43 @@
 
 main {
     display: flex;
-    width: fit-content;
-    margin: 0px 64px;
-}
-
-.content {
-    display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0px 32px;
-    max-width: 400px;
+    margin-left: auto;
+    width: fit-content;
 }
 
-.customization {
-    font-size: 24px;
-    line-height: 32px;
-}
-
-/* Adding font family to override the default dropdown styles */
-.dropdown {
-    font-family: "FS Industrie", Helvetica, Arial, sans-serif;
-    width: 100%;
-    font-size: 24px;
-    padding: 8px;
-    border: 2px solid black;
-    margin-bottom: 24px;
-}
-
-#last-child {
+.cart-item {
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    column-gap: 16px;
+}
+
+.middle {
+    flex-grow: 1;
+    min-width: 400px;
+    line-height: 8px;
+}
+
+.price {
     justify-content: flex-end;
+    margin-right: 70px;
+    /* background-color: antiquewhite; */
 }
 
-.caption {
-    font-size: 24px;
+figcaption {
     font-weight: bold;
+    text-decoration: underline solid #616161;
+    margin-top: 4px;
+    margin-bottom: 16px;
 }
 
-#btn-cart {
-    margin-left: 16px;
+.empty {
+    width: 200px;
+}
+
+button {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 70px;
+    margin-top: 40px;
 }
