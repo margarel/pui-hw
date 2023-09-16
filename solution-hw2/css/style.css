@@ -28,7 +28,7 @@ figure {
 }
 
 img {
-    border: 2px solid black;
+    border: 3px solid black;
 }
 
 h1 {
@@ -89,7 +89,7 @@ button {
     font-family: "FS Industrie", Helvetica, Arial, sans-serif;
     font-size: 24px;
     font-weight: bold;
-    border: 2px solid black;
+    border: 3px solid black;
     background-color: yellow;
     padding: 12px 32px;
 }
