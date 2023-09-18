@@ -1,3 +1,5 @@
+/* General styling across all 3 pages */
+
 /* https://www.w3schools.com/cssref/css3_pr_font-face_rule.php */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
 @font-face {
@@ -92,4 +94,8 @@ button {
     border: 3px solid black;
     background-color: yellow;
     padding: 12px 32px;
+}
+
+.dropdown {
+    font-family: "FS Industrie", Helvetica, Arial, sans-serif;
 }

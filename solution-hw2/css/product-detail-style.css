@@ -1,19 +1,4 @@
-/* https://www.w3schools.com/cssref/css3_pr_font-face_rule.php */
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face */
-@font-face {
-    font-family: "FS Industrie";
-    src: url(fonts/FSIndustrieRegular.otf) format(opentype);
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "FS Industrie";
-    src: url(fonts/FSIndustrieBold.otf) format(opentype);
-    font-weight: bold;
-    font-style: normal;
-}
-
+/* Styling for the Product Detail page */
 main {
     display: flex;
     width: fit-content;
@@ -33,9 +18,7 @@ main {
     line-height: 32px;
 }
 
-/* Adding font family to override the default dropdown styles */
 .dropdown {
-    font-family: "FS Industrie", Helvetica, Arial, sans-serif;
     width: 100%;
     font-size: 24px;
     padding: 8px;
