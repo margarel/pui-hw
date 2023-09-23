@@ -33,10 +33,10 @@ function updatePrice() {
 
     /* https://www.w3schools.com/jsref/jsref_number_parsefloat.asp */
     let glazingPrice = parseFloat(document.getElementById("glazing").value);
-    let packSizePrice = parseFloat(document.getElementById("pack-size").value);
+    let packPrice = parseFloat(document.getElementById("pack-size").value);
     let basePrice = 2.49;
 
-    let total = (basePrice + glazingPrice) * packSizePrice;
+    let total = (basePrice + glazingPrice) * packPrice;
 
     /* https://www.w3schools.com/jsref/jsref_tofixed.asp */
     document.getElementById("total-price").textContent = "$ " + total.toFixed(2); // toFixed --> to the second decimal place
