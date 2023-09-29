@@ -41,3 +41,9 @@ function updatePrice() {
     /* https://www.w3schools.com/jsref/jsref_tofixed.asp */
     document.getElementById("total-price").textContent = "$ " + total.toFixed(2); // toFixed --> to the second decimal place
 }
+
+const glazeSelect = document.getElementById("glazing");
+glazeSelect.addEventListener("change", updatePrice);
+
+const packSelect = document.getElementById("pack-size");
+packSelect.addEventListener("change", updatePrice);
