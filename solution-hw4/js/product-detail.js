@@ -14,9 +14,14 @@ headerElement.innerText = rollType + " Cinnamon Roll";
 /* Changes the image to match the correct product */
 const rollImage = document.querySelector("#roll-image");
 let rollName = rollType.toLowerCase();
-rollImage.src = "../../assets/products/" + rollName + "-cinnamon-roll.jpg";
+rollImage.src = "./../assets/products/" + rollName + "-cinnamon-roll.jpg";
 console.log(rollType);
 console.log(rollImage.src);
+
+/* 
+const rollImage = document.querySelector("#roll-image");
+rollImage.src = "../../assets/products/" + rollType.toLowerCase() + "-cinnamon-roll.jpg";
+*/
 
 /* All the glazing options */
 const glazingOptions = [
