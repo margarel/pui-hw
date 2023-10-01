@@ -1,11 +1,8 @@
+/* Populating drop down menu & changing page to match the cinnamon roll */
+
 const queryString = window.location.search;
-/* console.log(queryString); // ?=roll(blah blah blah) */
-
 const params = new URLSearchParams(queryString);
-/* console.log(params); // object */
-
 const rollType = params.get("roll");
-/* console.log(rollType); // Apple or like Double-Chocolate */
 
 /* Changes the title of the page to match the product name */
 const headerElement = document.querySelector("#type");
@@ -15,13 +12,6 @@ headerElement.innerText = rollType + " Cinnamon Roll";
 const rollImage = document.querySelector("#roll-image");
 let rollName = rollType.toLowerCase();
 rollImage.src = "./../assets/products/" + rollName + "-cinnamon-roll.jpg";
-console.log(rollType);
-console.log(rollImage.src);
-
-/* 
-const rollImage = document.querySelector("#roll-image");
-rollImage.src = "../../assets/products/" + rollType.toLowerCase() + "-cinnamon-roll.jpg";
-*/
 
 /* All the glazing options */
 const glazingOptions = [
@@ -49,20 +39,16 @@ function populateDropdown(id, options) {
         dropdown.appendChild(optionElement);
     });
 
+    /* Updates the dropdown change for console output */
     dropdown.addEventListener("change", () => {
         const selectedOption = dropdown.options[dropdown.selectedIndex].textContent;
-        /* console.log(selectedOption); */
     })
 }
 
 populateDropdown("glazing", glazingOptions);
 populateDropdown("pack-size", packSizeOptions);
 
-
-
-
-
-/* Checking if the cinnamon roll flavor is  */
+/* Checking if the cinnamon roll flavor is the selected one, then assign correct base price */
 const rollsArray = Object.entries(rolls);
 let type;
 let basePrice;
@@ -77,8 +63,6 @@ for (let i = 0; i < rollsArray.length; i++) {
 
 document.getElementById("total-price").textContent = "$ " + basePrice;
 
-
-
 /* Updates the price on change of dropdown selection */
 function updatePrice() {
 
@@ -91,7 +75,6 @@ function updatePrice() {
     /* https://www.w3schools.com/jsref/jsref_tofixed.asp */
     document.getElementById("total-price").textContent = "$ " + total.toFixed(2); // toFixed --> to the second decimal place
 }
-
 
 const glazeSelect = document.getElementById("glazing");
 glazeSelect.addEventListener("change", updatePrice);
@@ -113,6 +96,7 @@ class Roll {
 const cartButton = document.getElementById("btn-cart");
 cartButton.addEventListener("click", addToCart);
 
+/* Pushes cinnamon roll info & selected options into console */
 function addToCart() {
     let glazingId = document.getElementById("glazing");
     let glazingSelected = glazingId.options[glazingId.selectedIndex].textContent;
