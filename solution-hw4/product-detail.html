@@ -5,6 +5,7 @@
     <title>Bun Bun Bakery Product Detail</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/product-detail-style.css">
+    <script src="js/rollsData.js" defer></script>
     <script src="js/product-detail.js" defer></script>
 </head>
 
@@ -22,14 +23,14 @@
                 <a class="nav-inactive" href="./cart.html">CART</a>
             </nav>
             <hr>
-            <h1>Original cinnamon roll</h1>
+            <h1 id="type">Original cinnamon roll</h1>
         </section>
     </header>
 
     <!-- Main content containing menu image and options -->
     <main>
         <figure class="thumbnail">
-            <img src="../assets/products/original-cinnamon-roll.jpg" width="600" alt="Original cinnamon roll image"/>
+            <img id="roll-image" src="../assets/products/original-cinnamon-roll.jpg" width="600" alt="Original cinnamon roll image"/>
         </figure>
 
         <section class="content">
