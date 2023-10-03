@@ -24,3 +24,19 @@ const rolls = {
         "imageFile": "strawberry-cinnamon-roll.jpg"
     }    
 };
+
+/* All the glazing options */
+const glazingOptions = [
+    {name: "Keep original", price: 0.00},
+    {name: "Sugar milk", price: 0.00},
+    {name: "Vanilla milk", price: 0.50},
+    {name: "Double chocolate", price: 1.50}
+];
+
+/* All the pack size options with their prices */
+const packSizeOptions = [
+    {name: "1", price: 1.00},
+    {name: "3", price: 3.00},
+    {name: "6", price: 5.00},
+    {name: "12", price: 10.00}
+];
