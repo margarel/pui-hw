@@ -29,25 +29,24 @@
 
     <!-- Main content with 2 added cinnamon rolls into cart -->
     <main>
-        <section class="cart-item">
-            <figure>
-                <img src="../assets/products/original-cinnamon-roll.jpg" width="200" alt="Original cinnamon roll image"/>
-            </figure>
-
-            <section class="middle">
-                <h2>Original Cinnamon Roll</h2>
-                <h2>Glazing: Keep original</h2>
-                <h2>Pack Size: 1</h2>
+        <template id="cart-template">
+            <section class="cart-item">
+                <figure>
+                    <img class="cinnamon-roll-thumbnail" src="../assets/products/original-cinnamon-roll.jpg" width="200" alt="Original cinnamon roll image"/>
+                    <br>
+                    <button class="remove-button">Remove</button>
+                </figure>
+                <div class="middle">
+                    <p class="in-cart cinnamon-roll-name">Original Cinnamon Roll</p>
+                    <p class="in-cart glazing-choice">Glazing: Keep original</p>
+                    <p class="in-cart pack-choice">Pack Size: 1</p>
+                </div>
+                <h2 class="price">$ 2.49</h2>
             </section>
+        </template>
+        <div class="cart-list"></div>
 
-            <h2 class="price">$ 2.49</h2>
-        </section>
-
-        <div class="cart-item">
-            <p class="caption">Remove</p>
-        </div>
-
-        <section class="cart-item">
+        <!-- <section class="cart-item">
             <figure>
                 <img src="../assets/products/double-chocolate-cinnamon-roll.jpg" width="200" alt="Double-chocolate cinnamon roll image"/>
             </figure>
@@ -63,7 +62,7 @@
 
         <div class="cart-item">
             <p class="caption">Remove</p>
-        </div>
+        </div> -->
 
         <hr>
 
@@ -76,7 +75,7 @@
                 <h2>Total</h2>
             </section>
 
-            <h2 class="price">$ 29.94</h2>
+            <h2 class="price" id="total-cart-price">$ 29.94</h2>
         </section>
 
         <button>Checkout</button>

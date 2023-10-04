@@ -1,19 +1,3 @@
-/* 
-1. use js to display the items in the cart
-2. user can remove item
-3. total price updates
-
-
-
-*/
-
-
-
-
-
-
-
-
 /* Initialize the shopping cart */
 let cart = [];
 
@@ -23,10 +7,12 @@ class Roll {
         this.glazing = rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
+
+        this.element = null;
     }
 
     // Calculate the total price based on base price and add array to cart array
-    toCartArray() {
+    totalPrice() {
         let glazingPrice = 0;
         let packPrice = 0;
 
@@ -37,8 +23,6 @@ class Roll {
             }
         }
 
-        /* console.log(glazingPrice); */
-
         for (let j = 0; j < packSizeOptions.length; j++) {
             if (this.size == packSizeOptions[j].name.toLowerCase()) {
                 packPrice = packSizeOptions[j].price;
@@ -46,63 +30,104 @@ class Roll {
             }
         }
 
-        /* console.log(packPrice); */
-
         let total = ((this.basePrice + glazingPrice) * packPrice).toFixed(2);
-        /* console.log(total); */
-        let cartArray = [this.type, this.glazing, this.size, total];
-        /* console.log(cartArray); */
+        return total;
+    }
+
+    // Adding roll to cart array
+    toCartArray() {
+        let cartArray = [this.type, this.glazing, this.size, this.totalPrice()];
         cart.push(cartArray);
-        return cart;
     }
 }
 
+// All the new objects
 let roll1 = new Roll("Original", "Sugar Milk", 1, 2.49); // total = $2.49
 let roll2 = new Roll("Walnut", "Vanilla Milk", 12, 3.49); // total = $39.90
 let roll3 = new Roll("Raisin", "Sugar Milk", 3, 2.99); // total = $8.97
 let roll4 = new Roll("Apple", "Original", 3, 3.49); // total = $10.47
 
+// Adding new objects to the cart
 roll1.toCartArray();
 roll2.toCartArray();
 roll3.toCartArray();
 roll4.toCartArray();
 
-console.log(cart);
+/* Displaying all the new objects into the DOM */
+function display(roll) {
+    const template = document.querySelector("#cart-template");
+    const clone = template.content.cloneNode(true);
+    roll.element = clone.querySelector(".cart-item");
 
+    // Changing image
+    let thumbnail = roll.element.querySelector(".cinnamon-roll-thumbnail");
+    console.log(roll.element);
+    console.log(roll.element.querySelector(".cinnamon-roll-thumbnail"));
+    thumbnail.src = "./../assets/products/" + roll.type.toLowerCase() + "-cinnamon-roll.jpg";
 
+    // Changing name
+    let cinnamonRollName = roll.element.querySelector(".cinnamon-roll-name");
+    cinnamonRollName.textContent = roll.type + " Cinnamon Roll";
+    console.log(cinnamonRollName);
 
+    // Changing glazing type
+    let glazingChoice = roll.element.querySelector(".glazing-choice");
+    glazingChoice.textContent = "Glazing: " + roll.glazing;
 
+    // Changing pack size
+    let packChoice = roll.element.querySelector(".pack-choice");
+    packChoice.textContent = "Pack Size: " + roll.size;
 
-/* function totalPrice() {
+    // Calculating the total price based on glazing type, pack size, and the base price
+    let price = roll.element.querySelector(".price");
+    price.textContent = "$ " + roll.totalPrice();
+
+    // Remove the cart entry
+    let removeRollButton = roll.element.querySelector(".remove-button");
+
+    removeRollButton.addEventListener('click', () => {
+        deleteRoll(roll);
+      });
+    
+    // Adding the roll after the previous roll
+    let cartList = document.querySelector(".cart-list");
+    cartList.appendChild(roll.element);
 
 }
 
-const rollsArray = Object.entries(rolls);
-let type;
-let basePrice;
+// Displays all the rolls into the DOM
+display(roll1);
+display(roll2);
+display(roll3);
+display(roll4);
 
-for (let i = 0; i < rollsArray.length; i++) {
-    type = rollsArray[i][0];
-    if (type == rollType) {
-        basePrice = rollsArray[i][1].basePrice;
-        break;
+/* Calculates the total checkout price */
+function totalCartPrice(cart) {
+    let sum = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        sum += parseFloat(cart[i][3]);
     }
+
+    return sum;
 }
 
-document.getElementById("total-price").textContent = "$ " + basePrice;
+sumOfCart = document.getElementById("total-cart-price");
+sumOfCart.textContent = "$ " + totalCartPrice(cart).toFixed(2);
 
-function updatePrice() {
-    let glazingPrice = parseFloat(document.getElementById("glazing").value);
-    let packPrice = parseFloat(document.getElementById("pack-size").value);
+/* Removes the roll from the cart */
+function deleteRoll(roll) {
+    roll.element.remove();
 
-    let total = (basePrice + glazingPrice) * packPrice;
+    // Remove the specified roll from the array
+    for (let i = 0; i < cart.length; i++) {
+        if (roll.type == cart[i][0]) {
+            cart.splice(i, 1);
+            break;
+        }
+    }
 
-    document.getElementById("total-price").textContent = "$ " + total.toFixed(2);
+    // Updates the total cart price after removing a roll
+    sumOfCart = document.getElementById("total-cart-price");
+    sumOfCart.textContent = "$ " + totalCartPrice(cart).toFixed(2);
 }
-
-/* let roll1 = new Roll("Original", "Sugar Milk", 1, totalPrice);
-let roll2 = new Roll("Walnut", "Vanilla Milk", 12, totalPrice);
-let roll3 = new Roll("Raisin", "Sugar Milk", 3, totalPrice);
-let roll4 = new Roll("Apple", "Original", 3, totalPrice); */
-
-/* cart.push(roll1, roll2, roll3, roll4); */
