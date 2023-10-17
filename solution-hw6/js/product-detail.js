@@ -95,5 +95,10 @@ function addToCart() {
     cart.push(newRoll);
 
     console.log(cart);
+
+    saveToLocalStorage();
 }
 
+function saveToLocalStorage() {
+    
+}
