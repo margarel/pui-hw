@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bun Bun Bakery Product Detail</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product-detail-style.css">
+    <script src="js/rollsData.js" defer></script>
+    <script src="js/product-detail.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Top navigation bar including logo, navigation, and page title -->
+    <header>
+        <figure>
+            <a href="./index.html"><img id="logo" src="../assets/logo/logo-01.svg" width="400" alt="Logo of Bun Bun Bakery"/></a>
+        </figure>
+
+        <section class="top">
+            <nav>
+                <a class="nav-active" href="./index.html"><mark>PRODUCTS</mark></a>
+                <a class="nav-inactive" href="./cart.html">CART</a>
+            </nav>
+            <hr>
+            <h1 id="type">Original cinnamon roll</h1>
+        </section>
+    </header>
+
+    <!-- Main content containing menu image and options -->
+    <main>
+        <figure class="thumbnail">
+            <img id="roll-image" src="../assets/products/original-cinnamon-roll.jpg" width="600" alt="Original cinnamon roll image"/>
+        </figure>
+
+        <section class="content">
+            <div class="content-child">
+                <h2>Customize our delicious, hand-made cinnamon roll to your liking!</h2>
+            </div>
+
+            <!-- w3school dropdown menu -->
+            <div class="content-child">
+                <div>
+                    <label class="customization" for="glazing">Glazing:</label>
+                    <br>
+                    <!-- https://www.w3schools.com/jsref/event_onchange.asp -->
+                    <select class="dropdown" name="glazing" id="glazing"></select>
+                </div>
+
+                <div>
+                    <label class="customization" for="pack-size">Pack size:</label>
+                    <br>
+                    <select class="dropdown" name="pack-size" id="pack-size"></select>
+                </div>
+            </div>
+
+            <div class="content-child" id="last-child">
+                <label class="caption" id="total-price">$ 2.49</label>
+                <button class="caption" id="btn-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

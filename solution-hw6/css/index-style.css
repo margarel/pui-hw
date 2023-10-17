@@ -1,0 +1,37 @@
+/* Styling for Gallery page */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    margin: auto;
+    gap: 64px;
+}
+
+.card {
+    width: fit-content;
+    padding: 8px;
+}
+
+.card:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.listing {
+    width: 285px;
+    margin: auto;
+    line-height: 30px;
+}
+
+.name {
+    text-decoration: underline solid #616161;
+}
+
+.price {
+    font-weight: normal;
+}
