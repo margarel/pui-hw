@@ -1,20 +1,35 @@
-/* Initialize the shopping cart */
-
-/* TODO: If no cart exists, create empty array  */
+/* Initialize empty shopping cart if nothing in local storage */
 let cart = [];
+let retrievedCartData = retrieveFromLocalStorage();
+let globalCounter = 0; // Checking roll id for removing from cart
 
+/* Retrieves all added rolls from local storage */
+function retrieveFromLocalStorage() {
+    const cartJSON = localStorage.getItem("cart");
+
+    if (cartJSON !== null && cartJSON !== undefined) {
+        return JSON.parse(cartJSON);
+    } else {
+        return [];
+    }
+}
+
+/* Create a roll object */
 class Roll {
-    constructor(rollType, rollGlazing, packSize, rollPrice) {
+    constructor(rollType, rollGlazing, packSize, rollPrice, globalCounter) {
         this.type = rollType;
         this.glazing = rollGlazing;
         this.size = packSize;
         this.basePrice = rollPrice;
+        this.totalPrice = this.calcTotalPrice();
+
+        this.globalCounter = globalCounter; // Check roll Id
 
         this.element = null;
     }
 
     // Calculate the total price based on base price and add array to cart array
-    totalPrice() {
+    calcTotalPrice() {
         let glazingPrice = 0;
         let packPrice = 0;
 
@@ -35,25 +50,7 @@ class Roll {
         let total = ((this.basePrice + glazingPrice) * packPrice).toFixed(2);
         return total;
     }
-
-    // Adding roll to cart array
-    toCartArray() {
-        let cartArray = [this.type, this.glazing, this.size, this.totalPrice()];
-        cart.push(cartArray);
-    }
 }
-
-// All the new objects
-let roll1 = new Roll("Original", "Sugar Milk", 1, 2.49); // total = $2.49
-let roll2 = new Roll("Walnut", "Vanilla Milk", 12, 3.49); // total = $39.90
-let roll3 = new Roll("Raisin", "Sugar Milk", 3, 2.99); // total = $8.97
-let roll4 = new Roll("Apple", "Original", 3, 3.49); // total = $10.47
-
-// Adding new objects to the cart
-roll1.toCartArray();
-roll2.toCartArray();
-roll3.toCartArray();
-roll4.toCartArray();
 
 /* Displaying all the new objects into the DOM */
 function display(roll) {
@@ -63,14 +60,11 @@ function display(roll) {
 
     // Changing image
     let thumbnail = roll.element.querySelector(".cinnamon-roll-thumbnail");
-    console.log(roll.element);
-    console.log(roll.element.querySelector(".cinnamon-roll-thumbnail"));
     thumbnail.src = "./../assets/products/" + roll.type.toLowerCase() + "-cinnamon-roll.jpg";
 
     // Changing name
     let cinnamonRollName = roll.element.querySelector(".cinnamon-roll-name");
     cinnamonRollName.textContent = roll.type + " Cinnamon Roll";
-    console.log(cinnamonRollName);
 
     // Changing glazing type
     let glazingChoice = roll.element.querySelector(".glazing-choice");
@@ -82,7 +76,7 @@ function display(roll) {
 
     // Calculating the total price based on glazing type, pack size, and the base price
     let price = roll.element.querySelector(".price");
-    price.textContent = "$ " + roll.totalPrice();
+    price.textContent = "$ " + roll.totalPrice;
 
     // Remove the cart entry
     let removeRollButton = roll.element.querySelector(".remove-button");
@@ -97,18 +91,31 @@ function display(roll) {
 
 }
 
-// Displays all the rolls into the DOM
-display(roll1);
-display(roll2);
-display(roll3);
-display(roll4);
+/* Displays all the rolls in local storage on the cart page */
+function displayCartItems() {
+    const cartList = document.querySelector(".cart-list");
+
+    cartList.innerHTML = "";
+
+    if (retrievedCartData !== null && retrievedCartData !== undefined) {
+        let roll;
+        for (const item of retrievedCartData) {
+            roll = new Roll(item.type, item.glazing, item.size, item.basePrice, globalCounter);
+            cart.push(roll);
+            display(roll);
+            globalCounter += 1;
+        }
+    }
+}
+
+displayCartItems();
 
 /* Calculates the total checkout price */
 function totalCartPrice(cart) {
     let sum = 0;
 
     for (let i = 0; i < cart.length; i++) {
-        sum += parseFloat(cart[i][3]);
+        sum += parseFloat(cart[i].totalPrice);
     }
 
     return sum;
@@ -119,11 +126,12 @@ sumOfCart.textContent = "$ " + totalCartPrice(cart).toFixed(2);
 
 /* Removes the roll from the cart */
 function deleteRoll(roll) {
+    let counter = roll.globalCounter;
     roll.element.remove();
 
     // Remove the specified roll from the array
     for (let i = 0; i < cart.length; i++) {
-        if (roll.type == cart[i][0]) {
+        if (counter == cart[i].globalCounter) {
             cart.splice(i, 1);
             break;
         }
@@ -132,4 +140,13 @@ function deleteRoll(roll) {
     // Updates the total cart price after removing a roll
     sumOfCart = document.getElementById("total-cart-price");
     sumOfCart.textContent = "$ " + totalCartPrice(cart).toFixed(2);
+
+    saveToLocalStorage();
+}
+
+function saveToLocalStorage() {
+    const cartJSON = JSON.stringify(cart);
+
+    // Save the JSON string in local storage
+    localStorage.setItem("cart", cartJSON);
 }

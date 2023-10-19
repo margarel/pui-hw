@@ -100,5 +100,21 @@ function addToCart() {
 }
 
 function saveToLocalStorage() {
-    
+    const cartJSON = JSON.stringify(cart);
+
+    console.log(cartJSON);
+    // Save the JSON string in local storage
+    localStorage.setItem("cart", cartJSON);
+}
+
+function retrieveFromLocalStorage() {
+    const cartJSON = localStorage.getItem("cart");
+
+    if (cartJSON) {
+        cart = JSON.parse(cartJSON);
+    }
+}
+
+if (localStorage.getItem("cart") != null) {
+    retrieveFromLocalStorage();
 }
