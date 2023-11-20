@@ -1,0 +1,30 @@
+.overlay-top {
+    // position: absolute;
+    margin-top: 6rem;
+    z-index: 999;
+}
+
+// .overlay-md-top {
+//     position: absolute;
+//     width: 720px;
+//     top: 1.5rem;
+//     left: 1.5rem;
+//     margin-right: auto;
+//     margin-left: auto;
+//     z-index: 999;
+// }
+
+.overlay-bottom {
+    position: absolute;
+    bottom: 6rem;
+    left: 6rem;
+    z-index: 999;
+}
+
+.project {
+    margin: 8rem 0rem;
+
+    .img-fluid {
+        width: 100%;
+    }
+}

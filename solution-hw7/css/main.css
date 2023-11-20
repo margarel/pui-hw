@@ -1,0 +1,118 @@
+/* $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
+$box-shadow-darker: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+$box-shadow-darker-center: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+$text-shadow: 0 0 8px rgba(0, 0, 0, 0.65);
+$text-shadow-lighter: 0 0 8px rgba(0, 0, 0, 0.4);
+
+.w-90 {
+  width: 90%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.box-shadow {
+  @include box-shadow;
+} */
+.overlay-top {
+  margin-top: 6rem;
+  z-index: 999;
+}
+
+.overlay-bottom {
+  position: absolute;
+  bottom: 6rem;
+  left: 6rem;
+  z-index: 999;
+}
+
+.project {
+  margin: 8rem 0rem;
+}
+.project .img-fluid {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+#spline {
+  position: relative;
+}
+
+footer, .other-projects {
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 540px) {
+  .box-sm {
+    width: 16rem;
+    margin: 4rem auto;
+  }
+}
+@media (min-width: 720px) {
+  .box-md {
+    width: 58rem;
+    margin: 8rem auto;
+  }
+}
+.tags {
+  margin-top: 4rem;
+}
+
+.quote {
+  hanging-punctuation: first;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  padding-top: 4rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+}
+nav .row {
+  position: inherit;
+}
+
+body {
+  background-color: #080b19;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h6 {
+  font-size: 1.125rem;
+  color: #888A99;
+}
+
+.subheader {
+  text-transform: uppercase;
+}
+
+.caption {
+  font-style: italic;
+}
+
+.body-1 {
+  font-size: 1.5rem;
+}
+
+.body-2 {
+  font-size: 1.125rem;
+}/*# sourceMappingURL=main.css.map */

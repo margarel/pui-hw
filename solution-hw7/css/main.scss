@@ -1,0 +1,59 @@
+// @mixin variablename {
+//    a;lksdjf;alksdf;aksldf
+// }
+
+// horizontal-line {
+    // @include variablename
+
+@import "variables";
+
+@import "home";
+@import "spline";
+@import "footer";
+
+@import "project";
+@import "project-nav";
+
+body {
+    // background-color: #141419;
+    background-color: $black;
+    color: $white;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+}
+
+h6 {
+    font-size: 1.125rem;
+    color: $gray-600;
+}
+
+.subheader {
+    text-transform: uppercase;
+}
+
+.caption {
+    font-style: italic;
+}
+
+.body-1 {
+    font-size: 1.5rem;
+}
+
+.body-2 {
+    font-size: 1.125rem;
+}
+
+// @mixin make-container($padding-x: $container-padding-x) {
+//     width: 100%;
+//     padding-right: $padding-x;
+//     padding-left: $padding-x;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
+
+// .container-project {
+//     @include make-container();
+// }
