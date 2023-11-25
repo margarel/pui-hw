@@ -13,6 +13,7 @@
 
 @import "project";
 @import "project-nav";
+@import "ncr";
 
 body {
     // background-color: #141419;
@@ -23,6 +24,30 @@ body {
 a {
     color: $white;
     text-decoration: none;
+    position: relative;
+}
+
+.link-hover {
+    &::before {
+        content: "";
+        position: absolute;
+        // display: block;
+        width: 100%;
+        bottom: -3px;
+        left: 0;
+        // width: 0;
+        height: 2px;
+        background-color: $white;
+        transform: scaleX(0);
+        transform-origin: top left;
+        // transition: width 0.3s ease;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::before {
+        width: 100%;
+        transform: scaleX(1);
+    }
 }
 
 h6 {
@@ -44,6 +69,10 @@ h6 {
 
 .body-2 {
     font-size: 1.125rem;
+}
+
+.img-fluid {
+    width: 100%;
 }
 
 // @mixin make-container($padding-x: $container-padding-x) {

@@ -16,7 +16,9 @@ $text-shadow-lighter: 0 0 8px rgba(0, 0, 0, 0.4);
   @include box-shadow;
 } */
 .overlay-top {
+  position: absolute;
   margin-top: 6rem;
+  width: 100%;
   z-index: 999;
 }
 
@@ -27,11 +29,21 @@ $text-shadow-lighter: 0 0 8px rgba(0, 0, 0, 0.4);
   z-index: 999;
 }
 
+.blur-gradient {
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 100%);
+  position: relative;
+  z-index: 998;
+}
+
+@media (max-width: 720px) {
+  #email, #resume {
+    display: none;
+  }
+}
 .project {
   margin: 8rem 0rem;
-}
-.project .img-fluid {
-  width: 100%;
 }
 
 body {
@@ -49,30 +61,37 @@ canvas {
 
 #spline {
   position: relative;
+  height: 100vh;
 }
 
 footer, .other-projects {
   padding-bottom: 6rem;
 }
 
+#capstone {
+  text-decoration: line-through;
+}
+
 @media (min-width: 540px) {
   .box-sm {
-    width: 16rem;
+    width: 24rem;
     margin: 4rem auto;
   }
 }
 @media (min-width: 720px) {
   .box-md {
-    width: 58rem;
+    width: 24rem;
     margin: 8rem auto;
+  }
+}
+@media (min-width: 960px) {
+  .box-lg {
+    width: 58rem;
+    margin: 8rem, auto;
   }
 }
 .tags {
   margin-top: 4rem;
-}
-
-.quote {
-  hanging-punctuation: first;
 }
 
 nav {
@@ -86,6 +105,10 @@ nav .row {
   position: inherit;
 }
 
+.h1-in-footer {
+  margin-bottom: 0;
+}
+
 body {
   background-color: #080b19;
   color: #fff;
@@ -94,6 +117,24 @@ body {
 a {
   color: #fff;
   text-decoration: none;
+  position: relative;
+}
+
+.link-hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -3px;
+  left: 0;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: top left;
+  transition: transform 0.3s ease;
+}
+.link-hover:hover::before {
+  width: 100%;
+  transform: scaleX(1);
 }
 
 h6 {
@@ -115,4 +156,8 @@ h6 {
 
 .body-2 {
   font-size: 1.125rem;
+}
+
+.img-fluid {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

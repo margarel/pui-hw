@@ -7,6 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -18,20 +19,20 @@
                     <p class="body-1">NCR VOYIX</p>
                 </div>
                 <div class="col-12 col-md-6 text-end">
-                    <a class="body-1" href="index.html">← return home</a>
+                    <a class="body-1 link-hover" href="index.html">← return home</a>
                 </div>
             </div>
         </nav>
 
         <!-- Hero Image -->
-        <div>
-            <figure class="img-fluid">
+        <div id="ncr-overview">
+            <figure>
                 <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on a white background">
             </figure>
         </div>
 
         <!-- Overview, Role, Team, Duration, Tools -->
-        <div class="box-md box-sm">
+        <div class="box-lg box-md box-sm">
             <div>
                 <h6 class="subheader">Overview</h6>
                 <p class="body-1">During my time at NCR VOYIX, 
@@ -47,7 +48,7 @@
                 <div class="row d-flex">
                     <div class="col-12 col-md-6">
                         <h6 class="subheader">role</h6>
-                        <p>UI/UX Designer, Part-time & Intern</p>
+                        <p class="body-2">UI/UX Designer, Part-time & Intern</p>
                     </div>
                     <div class="col-12 col-md-6">
                         <h6 class="subheader">team</h6>
@@ -59,7 +60,7 @@
                 <div class="row d-flex">
                     <div class="col-12 col-md-6">
                         <h6 class="subheader">duration</h6>
-                        <p>8 months</p>
+                        <p class="body-2">8 months</p>
                     </div>
                     <div class="col-12 col-md-6">
                         <h6 class="subheader">tools</h6>
@@ -70,19 +71,17 @@
         </div>
 
         <!-- Final product image -->
-        <div>
-            <figure>
-                <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
-            </figure>
-        </div>
+        <figure>
+            <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
+        </figure>
 
         <!-- Big Quote -->
-        <div class="box-md box-sm">
+        <div class="box-lg box-md box-sm">
             <h1 class="quote">“Who do I contact again for this project? I have a workshop with the client soon!”</h1>
         </div>
 
         <!-- The Problem -->
-        <div class="box-md box-sm">
+        <div class="box-lg box-md box-sm">
             <h6 class="subheader">the problem</h6>
             <p class="body-1">The lack of centralized system led to significant challenges in accessing project data, 
                 particularly related to past collaborations with major clients. 
@@ -91,7 +90,7 @@
         </div>
 
         <!-- Image -->
-        <div class="box-md box-sm">
+        <div class="box-lg box-md box-sm">
             <figure>
                 <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
             </figure>
@@ -99,12 +98,168 @@
         </div>
 
         <!-- Research -->
-        <div class="box-md box-sm">
+        <div class="box-lg box-md box-sm">
             <h6 class="subheader">research</h6>
-            <p class="body-1">The lack of centralized system led to significant challenges in accessing project data, 
-                particularly related to past collaborations with major clients. 
-                This hindered the research and design team’s productivity 
-                as valuable time was lost in search for relevant information and insights.</p>
+            <p class="body-1">The initial ecosystem was chaotic—an array of disjointed files scattered across various platforms. 
+                Figjam boards lacked links to crucial interview insights from a project months prior. 
+                Personal Figma drafts were absent from the NCR library. 
+                Microsoft Sharepoint files led to inaccessible personal accounts, while presentations for different workshops 
+                were scattered throughout the NCR ecosystem, unconsolidated within outdated databases. </p>
+        </div>
+
+        <!-- Big Quote -->
+        <div class="box-lg box-md box-sm">
+            <h1 class="quote">How might we improve information retrieval to increase productivity between the design and research teams?</h1>
+        </div>
+
+        <!-- Research -->
+        <div class="box-lg box-md box-sm">
+            <h6 class="subheader">research</h6>
+            <p class="body-1">With these issues in mind, I co-hosted a workshop with Janie Pan to discover 
+                what researchers and designers need out of a centralized system. 
+                The main questions we wanted to ask were:</p>
+            <ol class="body-1">
+                <li>How do you currently find information about a project or customer?</li>
+                <li>What are some of the pain points with said process?</li>
+                <li>What information would you like that is currently not recorded?</li>
+            </ol>
+        </div>
+
+        <!-- Images -->
+        <div class="box-lg box-md box-sm">
+            <figure>
+                <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
+            </figure>
+            <figcaption class="small caption">[workshop photos planning] [workshop dry run] [workshop actual run]</figcaption>
+        </div>
+
+        <!-- Insights -->
+        <div class="box-lg box-md box-sm">
+            <h6 class="subheader">insights</h6>
+            <p class="body-1">From this workshop, I discovered three major issues:</p>
+            <ol class="body-1">
+                <li>The outdated research repository and customer contact database 
+                    demanded extensive upkeep, causing delays in researchers inputting their findings. 
+                    Researchers felt overwhelmed when inputting their findings as the process lacked structure.</li>
+                <li>Overlapping information within both databases led to confusion and 
+                    frustration among designers seeking past research or workshop details. </li>
+                <li>Crucially, designers lacked quick access to customer needs and goals through personas, 
+                    as this vital information remained disconnected from the databases.</li>
+            </ol>
+        </div>
+
+        <!-- Images -->
+        <div class="box-lg box-md box-sm">
+            <figure>
+                <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
+            </figure>
+            <figcaption class="small caption">[img post-it evidence of the most important things]</figcaption>
+        </div>
+
+        <!-- Ideation -->
+        <div class="box-lg box-md box-sm">
+            <h6 class="subheader">ideation</h6>
+            <p class="body-1">People wanted to use something familiar with a low learning curve for new users, 
+                so I started by comparing pre-existing software and systems that the team was already familiar with.</p>
+        </div>
+
+        <!-- Images -->
+        <div class="box-lg box-md box-sm">
+            <figure>
+                <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
+            </figure>
+            <figcaption class="small caption">[img of pros and cons of a list of software ncr figma ecosystem, 
+                microsoft sharepoint/files, onedrive, airtable, customized software, theydo, ]</figcaption>
+        </div>
+
+        <!-- Ideation -->
+        <div class="box-lg box-md box-sm">
+            <!-- <h6 class="subheader">ideation</h6> -->
+            <p class="body-1">Airtable hit most of the checkboxes that the team needed as 
+                it was already a tool that was integrated into their workflow and 
+                it can link all the information they needed together. 
+                However, one issue I had to tackle was how to make Airtable new-user-friendly.</p>
+        </div>
+
+        <!-- Big Quote -->
+        <div class="box-lg box-md box-sm">
+            <h1 class="quote">“Airtable is great for information, but I am so scared of using it 
+                because what if I accidentally change or delete something?”</h1>
+        </div>
+
+        <!-- Testing -->
+        <div class="box-lg box-md box-sm">
+            <h6 class="subheader">testing</h6>
+            <p class="body-1">With this concern in mind, I did an A/B test of two different user flows regarding the full database.</p>
+        </div>
+
+        <!-- Images -->
+        <div class="box-lg box-md box-sm">
+            <figure>
+                <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
+            </figure>
+            <figcaption class="small caption">[img of pros and cons of a list of software ncr figma ecosystem, 
+                microsoft sharepoint/files, onedrive, airtable, customized software, theydo, ]</figcaption>
+        </div>
+
+        <!-- Final Design -->
+        <div class="box-lg box-md box-sm">
+            <h6 class="subheader">final design</h6>
+            <p class="body-1">With an overwhelming majority favoring the documentation route, 
+                our centralized database was ready for launch and upkeep.</p>
+        </div>
+
+        <!-- Images -->
+        <div class="box-lg box-md box-sm">
+            <figure>
+                <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
+            </figure>
+            <figcaption class="small caption">[multiple images of the final product]
+                [think about rationale and also how xyz can tick the boxes of past concerns they had, ref past pain points]</figcaption>
+        </div>
+
+        <!-- Usage -->
+        <div class="box-lg box-md box-sm">
+            <h6 class="subheader">usage</h6>
+            <p class="body-1">In parallel with the creation of the centralized database, 
+                I was also designing a finance dashboard for NCR’s customers, 
+                specifically for warehouse managers. Because I needed to find information 
+                related to the companies and the customer themselves, 
+                it was a perfect opportunity to test the new system.</p>
+        </div>
+
+        <!-- Images -->
+        <div class="box-lg box-md box-sm">
+            <figure>
+                <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
+            </figure>
+            <figcaption class="small caption">[image of flowchart of how it worked, how i found company information, 
+                customer information, their journey map, and any research they did with past warehouse managers]
+                [images of final product of control panel]</figcaption>
+        </div>
+
+        <!-- Reflection -->
+        <div class="box-lg box-md box-sm">
+            <h6 class="subheader">reflection</h6>
+            <p class="body-1">During my time at NCR VOYIX, I improved upon invaluable skills that 
+                significantly enhanced my quality of work, ranging from learning research methodologies 
+                under the guidance of Ava Lamb to delving into service design principles with Berri Berto. 
+                One major highlight was presenting my work to the entire company upon project completion. 
+                It was immensely gratifying to witness keen interest from both the research and design team, 
+                eagerly anticipating the database's launch—an indication of its anticipated value within the organization.</p>
+        </div>
+
+        <!-- Big Quote -->
+        <div class="box-lg box-md box-sm">
+            <h1 class="quote">“Is this live now? Does this mean I don’t have to bother Jennifer to find our past projects?”</h1>
+        </div>
+
+        <!-- Images -->
+        <div class="box-lg box-md box-sm">
+            <figure>
+                <img class="img-fluid rounded-4" src="assets/home/thumbnail-ncr.png" alt="NCR VOYIX logo on white background">
+            </figure>
+            <figcaption class="small caption">[poster of the end of the internship]</figcaption>
         </div>
     </main>
 
@@ -112,19 +267,21 @@
     <div class="container other-projects">
         <div class="row d-flex align-items-end">
             <div class="col-12 col-md-4 text-center text-md-start">
-                <h1>Other Projects</h1>
+                <h1 class="h1-in-footer">Other Projects</h1>
             </div>
             <div class="col-6 col-md-2 text-center text-md-end">
-                <p>NCR VOYIX ↗</p>
+                <a class="body-1 link-hover" href="#ncr-overview">NCR VOYIX ↑</a>
             </div>
             <div class="col-6 col-md-2 text-center text-md-end">
-                <p>Oxygen ↗</p>
+                <a class="body-1 link-hover">Oxygen</a>
             </div>
             <div class="col-6 col-md-2 text-center text-md-end">
-                <p>Design Bloc ↗</p>
+                <a class="body-1 link-hover">Design Bloc</a>
             </div>
             <div class="col-6 col-md-2 text-center text-md-end">
-                <p>Capstone ↗</p>
+                <a class="body-1 link-hover" id="capstone">Capstone
+                    <span class="material-symbols-rounded">lock</span>
+                </a>
             </div>
         </div>
     </div>
@@ -137,16 +294,16 @@
                     margaret lu © 2023</p>
             </div>
             <div class="col-6 order-1 col-md-2 order-md-2 text-center text-md-end">
-                <a href="mailto:margaretlu.2018@gmail.com">email ↗</a>
+                <a class="body-2 link-hover" href="mailto:margaretlu.2018@gmail.com">email ↗</a>
             </div>
             <div class="col-6 order-2 col-md-2 order-md-3 text-center text-md-end">
-                <a href="assets/margaretlu-resume.pdf" target="_blank">resume ↗</a>
+                <a class="body-2 link-hover" href="assets/margaretlu-resume.pdf" target="_blank">resume ↗</a>
             </div>
             <div class="col-6 order-3 col-md-2 order-md-4 text-center text-md-end">
-                <a href="https://read.cv/mlu">read.cv ↗</a>
+                <a class="body-2 link-hover" href="https://read.cv/mlu">read.cv ↗</a>
             </div>
             <div class="col-6 order-4 col-md-2 order-md-5 text-center text-md-end">
-                <a href="https://www.linkedin.com/in/mlu1822/">linkedin ↗</a>
+                <a class="body-2 link-hover" href="https://www.linkedin.com/in/mlu1822/">linkedin ↗</a>
             </div>
         </div>
     </footer>

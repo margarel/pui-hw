@@ -1,18 +1,21 @@
 @media (min-width: 540px) {
     .box-sm {
-        width: 16rem;
-        // margin-left: auto;
-        // margin-right: auto;
+        width: 24rem;
         margin: 4rem auto;
     }
 }
 
 @media (min-width: 720px) {
     .box-md {
-        width: 58rem;
-        // margin-left: auto;
-        // margin-right: auto;
+        width: 24rem;
         margin: 8rem auto;
+    }
+}
+
+@media (min-width: 960px) {
+    .box-lg {
+        width: 58rem;
+        margin: 8rem, auto;
     }
 }
 
@@ -20,7 +23,11 @@
     margin-top: 4rem;
 }
 
-.quote {
-    // text-indent: -1em;
-    hanging-punctuation: first;
-}
+// .quote {
+//     // text-indent: -1em;
+//     hanging-punctuation: first;
+// }
+
+// .img-fluid {
+//     width: 100%;
+// }
