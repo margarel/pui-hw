@@ -6,7 +6,7 @@ import SplineLoader from '@splinetool/loader';
 
 // camera
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 70, 100000);
-camera.position.set(361.88, 297.08, 398);
+camera.position.set(361.88, 450, 700); //(361.88, 297.08, 398)
 camera.quaternion.setFromEuler(new THREE.Euler(-0.49, 0.68, 0.32));
 
 // scene
