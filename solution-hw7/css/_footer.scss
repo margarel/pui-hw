@@ -1,7 +1,18 @@
+#capstone {
+    text-decoration: line-through;
+}
+
 footer, .other-projects {
     padding-bottom: 6rem;
 }
 
-#capstone {
-    text-decoration: line-through;
+.other-projects {
+    margin-top: 6rem;
+}
+
+@media (max-width: 720px) {
+    #last-updated {
+        margin-top: 1rem;
+        // color: green;
+    }
 }
