@@ -758,6 +758,13 @@ footer, .other-projects {
     margin-top: 1rem;
   }
 }
+@media (min-width: 1200px) {
+  .shrink {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .tags {
   margin-top: 4rem;
 }
