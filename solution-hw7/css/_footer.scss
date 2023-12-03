@@ -10,6 +10,12 @@ footer, .other-projects {
     margin-top: 6rem;
 }
 
+@media (max-width: 991px) {
+    .other-projects-title {
+        margin-bottom: 1rem;
+    }
+}
+
 @media (max-width: 720px) {
     #last-updated {
         margin-top: 1rem;

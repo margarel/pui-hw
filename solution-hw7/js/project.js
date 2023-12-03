@@ -1,24 +1,33 @@
-document.body.style.scrollBehavior = "smooth";
+// document.body.style.scrollBehavior = "smooth";
 
-let projectUp = {
-    distance: '125%',
-    duration: "500",
-    opacity: "0",
-    easing: "ease-out"
-};
+// let projectUpDelay = {
+//     distance: "125%",
+//     duration: "1000",
+//     opacity: "0",
+//     delay: "250",
+//     interval: "500",
+//     easing: "ease-out"
+// };
 
-let projectUpDelay = {
-    distance: "125%",
-    duration: "1000",
-    opacity: "0",
-    delay: "250",
-    interval: "500",
-    easing: "ease-out"
-};
+// let projectUp = {
+//     distance: '125%',
+//     duration: "500",
+//     opacity: "0",
+//     easing: "ease-out"
+// };
+
+// ScrollReveal().reveal(".animationUpDelay", projectUpDelay);
+// ScrollReveal().reveal(".animationUp", projectUp);
 
 
-ScrollReveal().reveal(".animationUp", projectUp);
-ScrollReveal().reveal(".animationUpDelay", projectUpDelay);
+
+
+
+
+
+
+
+
 // scroll();
 
 

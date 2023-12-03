@@ -1,20 +1,28 @@
 @media (min-width: 540px) {
-    .box-sm {
-        width: 24rem;
+    .box-xs {
+        width: 15rem;
         margin: 4rem auto;
+        color: green;
+    }
+}
+
+@media (min-width: 768px) {
+    .box-sm {
+        width: 32rem;
+        margin: 8rem auto;
     }
 }
 
 @media (min-width: 720px) {
     .box-md {
-        width: 24rem;
+        width: 36rem;
         margin: 8rem auto;
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 992px) {
     .box-lg {
-        width: 58rem;
+        width: 54rem;
         margin: 8rem, auto;
     }
 }
@@ -22,12 +30,3 @@
 .tags {
     margin-top: 4rem;
 }
-
-// .quote {
-//     // text-indent: -1em;
-//     hanging-punctuation: first;
-// }
-
-// .img-fluid {
-//     width: 100%;
-// }

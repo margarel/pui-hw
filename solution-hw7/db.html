@@ -13,14 +13,16 @@
     <script src="js/main.js" defer></script>
     <script src="js/home.js" defer></script>
     <script src="js/project.js" defer></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <main class="container">
         <!-- Sticky header -->
-        <nav>
+        <nav class="animationUpDelay">
             <div class="row">
                 <div class="col-12 col-md-6 text-start">
-                    <p class="body-1">Design Bloc</p>
+                    <p class="body-1 nav-title">Design Bloc</p>
                 </div>
                 <div class="col-12 col-md-6 text-end">
                     <a class="body-1 link-hover" href="index.html">← return home</a>
@@ -29,15 +31,15 @@
         </nav>
 
         <!-- Hero Image -->
-        <div id="db-overview">
+        <div class="animationUpDelay" id="db-overview">
             <figure>
-                <img class="img-fluid rounded-4" src="assets/home/thumbnail-db.png" alt="NCR VOYIX logo on a white background">
+                <img class="full-image rounded-4" src="assets/home/thumbnail-db.png" alt="NCR VOYIX logo on a white background">
             </figure>
         </div>
 
         <!-- Overview, Role, Team, Duration, Tools -->
         <div class="box-lg box-md box-sm">
-            <div>
+            <div class="animationUpDelay">
                 <h6 class="subheader">Overview</h6>
                 <p class="body-1">Design Bloc is a small on-campus design firm at Georgia Institute of Technology 
                     where students work with external clients on a variety of projects. 
@@ -46,11 +48,12 @@
             </div>
 
             <!-- Tags -->
-            <div class="tags">
+            <div class="tags animationUpDelay">
                 <div class="row d-flex">
                     <div class="col-12 col-md-6">
                         <h6 class="subheader">role</h6>
-                        <p class="body-2">UX Research<br>
+                        <p class="body-2">Product Design<br>
+                            UX Research<br>
                             Branding
                         </p>
                     </div>
@@ -78,12 +81,12 @@
         </div>
 
         <!-- Final product image -->
-        <figure>
-            <img class="img-fluid rounded-4" src="assets/home/thumbnail-db.png" alt="NCR VOYIX logo on white background">
+        <figure class="animationUp">
+            <img class="full-image rounded-4" src="assets/home/thumbnail-db.png" alt="NCR VOYIX logo on white background">
         </figure>
 
         <!-- The Problem -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <h6 class="subheader">the problem</h6>
             <p class="body-1">The Hunter Hills neighborhood in Atlanta faced a critical challenge stemming 
                 from ongoing gentrification, which has significantly eroded the community's voice and cohesion. 
@@ -94,7 +97,7 @@
         </div>
 
         <!-- My Role -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <h6 class="subheader">my role</h6>
             <p class="body-1">I was responsible for developing the brand book with my team, 
                 starting from initial concept sketches of the logo to implementing potential 
@@ -102,16 +105,16 @@
         </div>
 
         <!-- Image -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <figure>
-                <img class="img-fluid rounded-4" src="assets/home/thumbnail-db.png" alt="Oxygen logo on white background">
+                <img class="full-image rounded-4" src="assets/home/thumbnail-db.png" alt="Oxygen logo on white background">
             </figure>
             <figcaption class="small caption">[image of the logo file on illustrator with all the circles]
             </figcaption>
         </div>
 
         <!-- Research -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <h6 class="subheader">Research</h6>
             <p class="body-1">In our collaborative efforts with the Hunter Hills community, 
                 our goal was to authentically capture their rich history through the creation 
@@ -126,9 +129,9 @@
         </div>
 
         <!-- Image -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <figure>
-                <img class="img-fluid rounded-4" src="assets/home/thumbnail-db.png" alt="Oxygen logo on white background">
+                <img class="full-image rounded-4" src="assets/home/thumbnail-db.png" alt="Oxygen logo on white background">
             </figure>
             <figcaption class="small caption">
                 [image of the walkaround and of the people]
@@ -136,7 +139,7 @@
         </div>
 
         <!-- Insights -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <h6 class="subheader">insights</h6>
             <p class="body-1">Following our comprehensive research, we learned that the 
                 Hunter Hills brand should reinforce the historic values of a unified community. 
@@ -151,12 +154,12 @@
         </div>
 
         <!-- Big Quote -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <h1 class="quote">“We believe in the binding power of community.”</h1>
         </div>
 
         <!-- Ideation -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <h6 class="subheader">ideation</h6>
             <p class="body-1">We started with initial thumbnail sketches, 
                 evolving through numerous iterations to shape it into its current form. 
@@ -167,9 +170,9 @@
         </div>
 
         <!-- Image -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <figure>
-                <img class="img-fluid rounded-4" src="assets/home/thumbnail-db.png" alt="Oxygen logo on white background">
+                <img class="full-image rounded-4" src="assets/home/thumbnail-db.png" alt="Oxygen logo on white background">
             </figure>
             <figcaption class="small caption">
                 [image of the logo development + image of the presentation we proposed with the grids]
@@ -177,7 +180,7 @@
         </div>
 
         <!-- Final Design -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <h6 class="subheader">final design</h6>
             <p class="body-1">After developing our core assets for the brand, 
                 we started combining all the features together to represent 
@@ -186,9 +189,9 @@
         </div>
 
         <!-- Image -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <figure>
-                <img class="img-fluid rounded-4" src="assets/home/thumbnail-db.png" alt="Oxygen logo on white background">
+                <img class="full-image rounded-4" src="assets/home/thumbnail-db.png" alt="Oxygen logo on white background">
             </figure>
             <figcaption class="small caption">
                 [image of the brand book]
@@ -196,7 +199,7 @@
         </div>
 
         <!-- Reflection -->
-        <div class="box-lg box-md box-sm">
+        <div class="box-lg box-md box-sm animationUp">
             <h6 class="subheader">Reflection and Next Steps</h6>
             <p class="body-1">Working with the Hunter Hills community was truly an opportunity I can hardly imagine. 
                 Being able to witness firsthand how our efforts directly impact and benefit a community was incredibly rewarding. 
@@ -211,21 +214,21 @@
     </main>
 
     <!-- Other Projects -->
-    <div class="container other-projects">
+    <div class="container other-projects animationUp">
         <div class="row d-flex align-items-end">
-            <div class="col-12 col-md-4 text-center text-md-start">
-                <h1 class="h1-in-footer">Other Projects</h1>
+            <div class="col-12 col-lg-4 text-center text-lg-start">
+                <h1 class="other-projects-title">Other Projects</h1>
             </div>
-            <div class="col-6 col-md-2 text-center text-md-end">
+            <div class="col-6 col-lg-2 text-center text-lg-end">
                 <a class="body-1 link-hover" href="ncr.html">NCR VOYIX</a>
             </div>
-            <div class="col-6 col-md-2 text-center text-md-end">
+            <div class="col-6 col-lg-2 text-center text-lg-end">
                 <a class="body-1 link-hover" href="oxygen.html">Oxygen</a>
             </div>
-            <div class="col-6 col-md-2 text-center text-md-end">
+            <div class="col-6 col-lg-2 text-center text-lg-end">
                 <a class="body-1 link-hover" href="#db-overview">Design Bloc ↑</a>
             </div>
-            <div class="col-6 col-md-2 text-center text-md-end">
+            <div class="col-6 col-lg-2 text-center text-lg-end">
                 <a class="body-1 link-hover" id="capstone">Capstone
                     <span class="material-symbols-rounded">lock</span>
                 </a>
@@ -234,7 +237,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="container">
+    <footer class="container animationUp">
         <div class="row d-flex">
             <div class="col-12 order-5 col-md-4 order-md-1 text-center text-md-start">
                 <p>Last Updated: 23.11.25<br>

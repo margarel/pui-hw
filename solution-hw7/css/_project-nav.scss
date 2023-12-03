@@ -4,11 +4,10 @@ nav {
     padding-top: 4rem;
     margin-bottom: 1.5rem;
     border-radius: 1rem;
+}
 
-    .row {
-        position: inherit;
-        // background-color: rgba(0, 0, 0, 0.5);
-        // border-radius: 1rem;
-        // backdrop-filter: blur(4px);
+@media (max-width: 767px) {
+    .nav-title {
+        display:none;
     }
 }
