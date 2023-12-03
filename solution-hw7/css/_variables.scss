@@ -95,6 +95,56 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark
 ) !default;
+
+$spacing: 1rem;
+$spacing-map: (
+  0: 0,
+  1: $spacing * 1, // 16px
+  2: $spacing * 2, // 32px
+  3: $spacing * 3, // 48px
+  4: $spacing * 4, // 64px
+  5: $spacing * 5, // 80px
+  6: $spacing * 6, // 96px
+  7: $spacing * 7, // 112px
+  8: $spacing * 8 // 128px
+);
+
+.mb0 {
+  margin-bottom: map-get($map: $spacing-map, $key: 0);
+}
+
+.mb1 {
+  margin-bottom: map-get($map: $spacing-map, $key: 1);
+}
+
+.mb2 {
+  margin-bottom: map-get($map: $spacing-map, $key: 2);
+}
+
+.mb3 {
+  margin-bottom: map-get($map: $spacing-map, $key: 3);
+}
+
+.mb4 {
+  margin-bottom: map-get($map: $spacing-map, $key: 4);
+}
+
+.mb5 {
+  margin-bottom: map-get($map: $spacing-map, $key: 5);
+}
+
+.mb6 {
+  margin-bottom: map-get($map: $spacing-map, $key: 6);
+}
+
+.mb7 {
+  margin-bottom: map-get($map: $spacing-map, $key: 7);
+}
+
+.mb8 {
+  margin-bottom: map-get($map: $spacing-map, $key: 8);
+}
+
 // scss-docs-end theme-colors-map
 
 /* $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
