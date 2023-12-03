@@ -1,21 +1,11 @@
 @import "variables";
 
 @import "home";
-@import "animation";
 @import "spline";
 @import "footer";
 
 @import "project";
 @import "project-nav";
-@import "ncr";
-@import "db";
-
-// @mixin variablename {
-//    a;lksdjf;alksdf;aksldf
-// }
-
-// horizontal-line {
-    // @include variablename
 
 body {
     background-color: $black;
@@ -71,19 +61,3 @@ a {
 .full-image {
     width: 100%;
 }
-
-// .full-image {
-//     width: 100%;
-// }
-
-// @mixin make-container($padding-x: $container-padding-x) {
-//     width: 100%;
-//     padding-right: $padding-x;
-//     padding-left: $padding-x;
-//     margin-right: auto;
-//     margin-left: auto;
-// }
-
-// .container-project {
-//     @include make-container();
-// }

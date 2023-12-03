@@ -96,6 +96,7 @@ $theme-colors: (
   "dark":       $dark
 ) !default;
 
+// Spacing used for project page
 $spacing: 1rem;
 $spacing-map: (
   0: 0,
@@ -144,23 +145,3 @@ $spacing-map: (
 .mb8 {
   margin-bottom: map-get($map: $spacing-map, $key: 8);
 }
-
-// scss-docs-end theme-colors-map
-
-/* $box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05);
-$box-shadow-darker: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-$box-shadow-darker-center: 0 0 8px 0 rgba(0, 0, 0, 0.25);
-$text-shadow: 0 0 8px rgba(0, 0, 0, 0.65);
-$text-shadow-lighter: 0 0 8px rgba(0, 0, 0, 0.4);
-
-.w-90 {
-  width: 90%;
-}
-
-.w-80 {
-  width: 80%;
-}
-
-.box-shadow {
-  @include box-shadow;
-} */

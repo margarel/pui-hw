@@ -1,3 +1,5 @@
+// Using ScrollReveal library
+
 let slideUp = {
     distance: '150%',
     duration: "1000",
@@ -14,6 +16,7 @@ let reveal = {
     opacity: "0"
 };
 
+// On initial load, everything on viewport loads in one after another
 let revealSpline = {
     delay: "1000",
     distance: "0%",
