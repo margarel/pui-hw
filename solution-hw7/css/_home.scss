@@ -22,15 +22,6 @@
     z-index: 999;
 }
 
-// doesn't work
-.blur-gradient {
-    height: 100vh;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 10%, rgba(0,0,0,0) 100%);
-    position: relative;
-    z-index: 998;
-}
-
 .project {
     margin: 8rem 0rem;
 }
